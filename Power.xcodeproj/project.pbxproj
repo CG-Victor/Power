@@ -7,21 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB6A66F2AF13856FA7241957 /* Pods_Power.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488A837C6FB90D70B4245999 /* Pods_Power.framework */; };
+		C219EA6A2131AED300DC0726 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C219EA692131AED300DC0726 /* GoogleService-Info.plist */; };
+		C2289283212F11750038AE07 /* meditationVideo3.mov in Resources */ = {isa = PBXBuildFile; fileRef = C2289282212F11750038AE07 /* meditationVideo3.mov */; };
+		C22F94812149CDD30016806E /* GoalJournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22F947E2149CDD20016806E /* GoalJournalController.swift */; };
+		C22F94822149CDD30016806E /* GoalsJournalEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22F947F2149CDD20016806E /* GoalsJournalEntryCell.swift */; };
+		C22F94832149CDD30016806E /* GoalsJournalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22F94802149CDD30016806E /* GoalsJournalHeader.swift */; };
+		C23F3186214594880096E53B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23F3185214594880096E53B /* LoginController.swift */; };
+		C23FAAC321348A2700666943 /* BeliefsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FAAC221348A2700666943 /* BeliefsListController.swift */; };
+		C23FAAC521348A8D00666943 /* BeliefsListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FAAC421348A8D00666943 /* BeliefsListHeader.swift */; };
+		C23FAAC721348AA100666943 /* BeliefsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FAAC621348AA100666943 /* BeliefsListCell.swift */; };
+		C23FAAC921348E0E00666943 /* BeliefsListJournalEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FAAC821348E0E00666943 /* BeliefsListJournalEntryController.swift */; };
+		C277C5582131ECFF00FA7F73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C277C5572131ECFF00FA7F73 /* Main.storyboard */; };
+		C281AB6A2134D22E00CFEA6D /* LimitingBeliefsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281AB692134D22E00CFEA6D /* LimitingBeliefsTextView.swift */; };
+		C281AB6C2134D24800CFEA6D /* EmpoweringBeliefsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281AB6B2134D24800CFEA6D /* EmpoweringBeliefsTextView.swift */; };
+		C297FB0E21307FDD003D55FD /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C297FB0D21307FDD003D55FD /* SignUpController.swift */; };
 		C2A82589212E4A4500D45C9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A82588212E4A4500D45C9C /* AppDelegate.swift */; };
-		C2A8258B212E4A4500D45C9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8258A212E4A4500D45C9C /* ViewController.swift */; };
-		C2A8258E212E4A4500D45C9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A8258C212E4A4500D45C9C /* Main.storyboard */; };
+		C2A8258B212E4A4500D45C9C /* MeditationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8258A212E4A4500D45C9C /* MeditationController.swift */; };
 		C2A82590212E4A4600D45C9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2A8258F212E4A4600D45C9C /* Assets.xcassets */; };
 		C2A82593212E4A4600D45C9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A82591212E4A4600D45C9C /* LaunchScreen.storyboard */; };
+		C2A8259B212E4CBE00D45C9C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8259A212E4CBE00D45C9C /* Extensions.swift */; };
+		C2B1B99A21351C4E007C0AE3 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1B99921351C4E007C0AE3 /* File.swift */; };
+		C2B1B99C21351C95007C0AE3 /* TextHolderWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1B99B21351C95007C0AE3 /* TextHolderWay.swift */; };
+		C2E88633212FE64A00F922FE /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88632212FE64A00F922FE /* UIColor+theme.swift */; };
+		C2E8C6A3213CAB5A00A2BE0F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2E8C69F213CAB5900A2BE0F /* Info.plist */; };
+		C2E8C6A4213CAB5A00A2BE0F /* VideoBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E8C6A1213CAB5900A2BE0F /* VideoBackground.swift */; };
+		C2E8C6A5213CAB5A00A2BE0F /* VideoBackgroundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E8C6A2213CAB5900A2BE0F /* VideoBackgroundError.swift */; };
+		C2F1E916212E5E6500137B59 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F1E915212E5E6500137B59 /* MainTabBarController.swift */; };
+		C2F3F6F4213527C400C6B2D1 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3F6F3213527C400C6B2D1 /* JournalEntry.swift */; };
+		C2F3F6F82135456100C6B2D1 /* BeliefsListJournalEntry2Draft.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3F6F72135456100C6B2D1 /* BeliefsListJournalEntry2Draft.swift */; };
+		C2F3F6FA213545B500C6B2D1 /* BeliefsListJournalEntry3New.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3F6F9213545B500C6B2D1 /* BeliefsListJournalEntry3New.swift */; };
+		C2F4569721484098005EAE55 /* ScrollingDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F4569621484098005EAE55 /* ScrollingDraft.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		488A837C6FB90D70B4245999 /* Pods_Power.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Power.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C2C554C75DBA211AFFD4364 /* Pods-Power.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Power.release.xcconfig"; path = "Pods/Target Support Files/Pods-Power/Pods-Power.release.xcconfig"; sourceTree = "<group>"; };
+		9E85B1FD0C687E4B29C7C168 /* Pods-Power.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Power.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Power/Pods-Power.debug.xcconfig"; sourceTree = "<group>"; };
+		C219EA692131AED300DC0726 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C2289282212F11750038AE07 /* meditationVideo3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = meditationVideo3.mov; path = "../../Power Icons/meditationVideo3.mov"; sourceTree = "<group>"; };
+		C22F947E2149CDD20016806E /* GoalJournalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalJournalController.swift; path = Power/Login/GoalJournal/GoalJournalController.swift; sourceTree = SOURCE_ROOT; };
+		C22F947F2149CDD20016806E /* GoalsJournalEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalsJournalEntryCell.swift; path = Power/Login/GoalJournal/GoalsJournalEntryCell.swift; sourceTree = SOURCE_ROOT; };
+		C22F94802149CDD30016806E /* GoalsJournalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalsJournalHeader.swift; path = Power/Login/GoalJournal/GoalsJournalHeader.swift; sourceTree = SOURCE_ROOT; };
+		C23F3185214594880096E53B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		C23FAAC221348A2700666943 /* BeliefsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeliefsListController.swift; sourceTree = "<group>"; };
+		C23FAAC421348A8D00666943 /* BeliefsListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeliefsListHeader.swift; sourceTree = "<group>"; };
+		C23FAAC621348AA100666943 /* BeliefsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeliefsListCell.swift; sourceTree = "<group>"; };
+		C23FAAC821348E0E00666943 /* BeliefsListJournalEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeliefsListJournalEntryController.swift; sourceTree = "<group>"; };
+		C277C5572131ECFF00FA7F73 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C281AB692134D22E00CFEA6D /* LimitingBeliefsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitingBeliefsTextView.swift; sourceTree = "<group>"; };
+		C281AB6B2134D24800CFEA6D /* EmpoweringBeliefsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpoweringBeliefsTextView.swift; sourceTree = "<group>"; };
+		C297FB0D21307FDD003D55FD /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		C2A82585212E4A4500D45C9C /* Power.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Power.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A82588212E4A4500D45C9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C2A8258A212E4A4500D45C9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C2A8258D212E4A4500D45C9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C2A8258A212E4A4500D45C9C /* MeditationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationController.swift; sourceTree = "<group>"; };
 		C2A8258F212E4A4600D45C9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2A82592212E4A4600D45C9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2A82594212E4A4600D45C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2A8259A212E4CBE00D45C9C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C2B1B99921351C4E007C0AE3 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		C2B1B99B21351C95007C0AE3 /* TextHolderWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHolderWay.swift; sourceTree = "<group>"; };
+		C2E88632212FE64A00F922FE /* UIColor+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
+		C2E8C69F213CAB5900A2BE0F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2E8C6A0213CAB5900A2BE0F /* SwiftVideoBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftVideoBackground.h; sourceTree = "<group>"; };
+		C2E8C6A1213CAB5900A2BE0F /* VideoBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoBackground.swift; sourceTree = "<group>"; };
+		C2E8C6A2213CAB5900A2BE0F /* VideoBackgroundError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoBackgroundError.swift; sourceTree = "<group>"; };
+		C2F1E915212E5E6500137B59 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		C2F3F6F3213527C400C6B2D1 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		C2F3F6F72135456100C6B2D1 /* BeliefsListJournalEntry2Draft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeliefsListJournalEntry2Draft.swift; sourceTree = "<group>"; };
+		C2F3F6F9213545B500C6B2D1 /* BeliefsListJournalEntry3New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeliefsListJournalEntry3New.swift; sourceTree = "<group>"; };
+		C2F4569621484098005EAE55 /* ScrollingDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingDraft.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +84,71 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB6A66F2AF13856FA7241957 /* Pods_Power.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24ABBC99A1B67840B9E658E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				488A837C6FB90D70B4245999 /* Pods_Power.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B49FFFA3FE8136041E68AEE8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E85B1FD0C687E4B29C7C168 /* Pods-Power.debug.xcconfig */,
+				9C2C554C75DBA211AFFD4364 /* Pods-Power.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C23F318421458BA60096E53B /* Drafts */ = {
+			isa = PBXGroup;
+			children = (
+				C2B1B99B21351C95007C0AE3 /* TextHolderWay.swift */,
+				C2B1B99921351C4E007C0AE3 /* File.swift */,
+				C2F3F6F72135456100C6B2D1 /* BeliefsListJournalEntry2Draft.swift */,
+				C2F4569621484098005EAE55 /* ScrollingDraft.swift */,
+				C2F3F6F9213545B500C6B2D1 /* BeliefsListJournalEntry3New.swift */,
+			);
+			path = Drafts;
+			sourceTree = "<group>";
+		};
+		C23FAAC1213489DC00666943 /* BeliefsList */ = {
+			isa = PBXGroup;
+			children = (
+				C23FAAC221348A2700666943 /* BeliefsListController.swift */,
+				C23FAAC821348E0E00666943 /* BeliefsListJournalEntryController.swift */,
+				C281AB692134D22E00CFEA6D /* LimitingBeliefsTextView.swift */,
+				C281AB6B2134D24800CFEA6D /* EmpoweringBeliefsTextView.swift */,
+				C23FAAC421348A8D00666943 /* BeliefsListHeader.swift */,
+				C23FAAC621348AA100666943 /* BeliefsListCell.swift */,
+			);
+			path = BeliefsList;
+			sourceTree = "<group>";
+		};
+		C297FB0C21307FCF003D55FD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C23F3185214594880096E53B /* LoginController.swift */,
+				C297FB0D21307FDD003D55FD /* SignUpController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		C2A8257C212E4A4500D45C9C = {
 			isa = PBXGroup;
 			children = (
 				C2A82587212E4A4500D45C9C /* Power */,
 				C2A82586212E4A4500D45C9C /* Products */,
+				B49FFFA3FE8136041E68AEE8 /* Pods */,
+				24ABBC99A1B67840B9E658E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +163,71 @@
 		C2A82587212E4A4500D45C9C /* Power */ = {
 			isa = PBXGroup;
 			children = (
+				C2E183F821306CEC00F6DF11 /* Goal Journal */,
+				C2289282212F11750038AE07 /* meditationVideo3.mov */,
+				C2BEAC312130E2910075E7DB /* Meditation */,
+				C297FB0C21307FCF003D55FD /* Login */,
+				C2F3F6F22135275600C6B2D1 /* Models */,
+				C23FAAC1213489DC00666943 /* BeliefsList */,
 				C2A82588212E4A4500D45C9C /* AppDelegate.swift */,
-				C2A8258A212E4A4500D45C9C /* ViewController.swift */,
-				C2A8258C212E4A4500D45C9C /* Main.storyboard */,
+				C277C5572131ECFF00FA7F73 /* Main.storyboard */,
+				C2E88632212FE64A00F922FE /* UIColor+theme.swift */,
 				C2A8258F212E4A4600D45C9C /* Assets.xcassets */,
 				C2A82591212E4A4600D45C9C /* LaunchScreen.storyboard */,
 				C2A82594212E4A4600D45C9C /* Info.plist */,
+				C219EA692131AED300DC0726 /* GoogleService-Info.plist */,
+				C2A8259C212E4CC600D45C9C /* Utils */,
+				C23F318421458BA60096E53B /* Drafts */,
+				C2E8C69E213CAB5900A2BE0F /* Sources */,
 			);
 			path = Power;
+			sourceTree = "<group>";
+		};
+		C2A8259C212E4CC600D45C9C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C2A8259A212E4CBE00D45C9C /* Extensions.swift */,
+				C2F1E915212E5E6500137B59 /* MainTabBarController.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C2BEAC312130E2910075E7DB /* Meditation */ = {
+			isa = PBXGroup;
+			children = (
+				C2A8258A212E4A4500D45C9C /* MeditationController.swift */,
+			);
+			path = Meditation;
+			sourceTree = "<group>";
+		};
+		C2E183F821306CEC00F6DF11 /* Goal Journal */ = {
+			isa = PBXGroup;
+			children = (
+				C22F947E2149CDD20016806E /* GoalJournalController.swift */,
+				C22F947F2149CDD20016806E /* GoalsJournalEntryCell.swift */,
+				C22F94802149CDD30016806E /* GoalsJournalHeader.swift */,
+			);
+			name = "Goal Journal";
+			path = "../Goal Journal";
+			sourceTree = "<group>";
+		};
+		C2E8C69E213CAB5900A2BE0F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C2E8C69F213CAB5900A2BE0F /* Info.plist */,
+				C2E8C6A0213CAB5900A2BE0F /* SwiftVideoBackground.h */,
+				C2E8C6A1213CAB5900A2BE0F /* VideoBackground.swift */,
+				C2E8C6A2213CAB5900A2BE0F /* VideoBackgroundError.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C2F3F6F22135275600C6B2D1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C2F3F6F3213527C400C6B2D1 /* JournalEntry.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +237,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2A82597212E4A4600D45C9C /* Build configuration list for PBXNativeTarget "Power" */;
 			buildPhases = (
+				582B9D90B34B187ABDD81AE3 /* [CP] Check Pods Manifest.lock */,
 				C2A82581212E4A4500D45C9C /* Sources */,
 				C2A82582212E4A4500D45C9C /* Frameworks */,
 				C2A82583212E4A4500D45C9C /* Resources */,
+				7DBD41BA471BCD0F4400F76F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,33 +292,95 @@
 			files = (
 				C2A82593212E4A4600D45C9C /* LaunchScreen.storyboard in Resources */,
 				C2A82590212E4A4600D45C9C /* Assets.xcassets in Resources */,
-				C2A8258E212E4A4500D45C9C /* Main.storyboard in Resources */,
+				C2E8C6A3213CAB5A00A2BE0F /* Info.plist in Resources */,
+				C277C5582131ECFF00FA7F73 /* Main.storyboard in Resources */,
+				C2289283212F11750038AE07 /* meditationVideo3.mov in Resources */,
+				C219EA6A2131AED300DC0726 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		582B9D90B34B187ABDD81AE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Power-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DBD41BA471BCD0F4400F76F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Power/Pods-Power-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftVideoBackground/SwiftVideoBackground.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftVideoBackground.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Power/Pods-Power-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C2A82581212E4A4500D45C9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2A8258B212E4A4500D45C9C /* ViewController.swift in Sources */,
+				C2F3F6FA213545B500C6B2D1 /* BeliefsListJournalEntry3New.swift in Sources */,
+				C2F3F6F4213527C400C6B2D1 /* JournalEntry.swift in Sources */,
+				C22F94812149CDD30016806E /* GoalJournalController.swift in Sources */,
+				C2A8258B212E4A4500D45C9C /* MeditationController.swift in Sources */,
+				C2E88633212FE64A00F922FE /* UIColor+theme.swift in Sources */,
+				C2E8C6A4213CAB5A00A2BE0F /* VideoBackground.swift in Sources */,
+				C2F4569721484098005EAE55 /* ScrollingDraft.swift in Sources */,
+				C2F1E916212E5E6500137B59 /* MainTabBarController.swift in Sources */,
+				C2F3F6F82135456100C6B2D1 /* BeliefsListJournalEntry2Draft.swift in Sources */,
+				C22F94832149CDD30016806E /* GoalsJournalHeader.swift in Sources */,
+				C2B1B99C21351C95007C0AE3 /* TextHolderWay.swift in Sources */,
+				C23F3186214594880096E53B /* LoginController.swift in Sources */,
+				C23FAAC321348A2700666943 /* BeliefsListController.swift in Sources */,
+				C23FAAC721348AA100666943 /* BeliefsListCell.swift in Sources */,
+				C2B1B99A21351C4E007C0AE3 /* File.swift in Sources */,
+				C281AB6A2134D22E00CFEA6D /* LimitingBeliefsTextView.swift in Sources */,
+				C2A8259B212E4CBE00D45C9C /* Extensions.swift in Sources */,
 				C2A82589212E4A4500D45C9C /* AppDelegate.swift in Sources */,
+				C297FB0E21307FDD003D55FD /* SignUpController.swift in Sources */,
+				C23FAAC521348A8D00666943 /* BeliefsListHeader.swift in Sources */,
+				C23FAAC921348E0E00666943 /* BeliefsListJournalEntryController.swift in Sources */,
+				C281AB6C2134D24800CFEA6D /* EmpoweringBeliefsTextView.swift in Sources */,
+				C2E8C6A5213CAB5A00A2BE0F /* VideoBackgroundError.swift in Sources */,
+				C22F94822149CDD30016806E /* GoalsJournalEntryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C2A8258C212E4A4500D45C9C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C2A8258D212E4A4500D45C9C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C2A82591212E4A4600D45C9C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -278,6 +508,7 @@
 		};
 		C2A82598212E4A4600D45C9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E85B1FD0C687E4B29C7C168 /* Pods-Power.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +527,7 @@
 		};
 		C2A82599212E4A4600D45C9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C2C554C75DBA211AFFD4364 /* Pods-Power.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
