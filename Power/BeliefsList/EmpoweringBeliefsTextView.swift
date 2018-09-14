@@ -48,7 +48,7 @@ class EmpoweringBeliefsTextView: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
+//        self.navigationController?.isNavigationBarHidden = true
         
         view.backgroundColor = UIColor.yellow
         
@@ -75,6 +75,14 @@ class EmpoweringBeliefsTextView: UIViewController, UITextViewDelegate {
         statusBarView.backgroundColor = statusBarColor
         view.addSubview(statusBarView)
         
+        
+        self.navigationItem.rightBarButtonItem =  UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
+        
+        
+    }
+    
+    @objc func save() {
+        print("saving")
     }
     
     
@@ -111,15 +119,17 @@ class EmpoweringBeliefsTextView: UIViewController, UITextViewDelegate {
     }
     
     
-    override func viewDidLayoutSubviews() {
-        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
     
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(false, animated: false)
-        
-    }
-    
+    // NAVIGATION HIDDEN
+//    override func viewDidLayoutSubviews() {
+//        navigationController?.setNavigationBarHidden(true, animated: false)
+//    }
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//        navigationController?.setNavigationBarHidden(false, animated: false)
+//
+//    }
+//
     
 }
 

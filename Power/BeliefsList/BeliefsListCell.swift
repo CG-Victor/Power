@@ -10,6 +10,15 @@ import UIKit
 
 class BeliefsListCell: UICollectionViewCell {
     
+    var journalEntry: JournalEntry? {
+        didSet {
+            
+//            titleLabel.text = journalEntry?.title
+        
+            
+        }
+    }
+//
     // needs to be didSet soon
     
     let titleLabel: UILabel = {
@@ -38,7 +47,7 @@ class BeliefsListCell: UICollectionViewCell {
         
         backgroundColor = UIColor.lightGreen.withAlphaComponent(1)
         
-        setupUserStatsView()
+        setupUserStackview()
         
 //        addSubview(titleLabel)
 //        titleLabel.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
@@ -49,7 +58,7 @@ class BeliefsListCell: UICollectionViewCell {
     }
     
     
-    fileprivate func setupUserStatsView() {
+    fileprivate func setupUserStackview() {
         let stackView = UIStackView(arrangedSubviews: [titleLabel, dateLabel])
         
         stackView.distribution = .fillEqually
@@ -60,6 +69,21 @@ class BeliefsListCell: UICollectionViewCell {
         addSubview(stackView)
         stackView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 12, paddingLeft: 12, paddingBottom: 0, paddingRight: 12, width: 50, height: 50)
     }
+    
+    fileprivate func setupAttributedTitleWithDate() {
+        
+        guard let journalEntry = self.journalEntry else { return }
+        
+        
+        let attributedText = NSMutableAttributedString(string: "\(journalEntry.title)", attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14)])
+        
+        let timeAgoDisplay = journalEntry.creationDate.timeAgoDisplay()
+        
+        attributedText.append(NSAttributedString(string: timeAgoDisplay, attributes:
+            [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14),
+             NSAttributedStringKey.foregroundColor : UIColor.gray ]))
+    }
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

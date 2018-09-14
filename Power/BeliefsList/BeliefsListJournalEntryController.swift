@@ -9,7 +9,12 @@
 
 import UIKit
 
+
+
+
 class BeliefsListJournalEntryController: UIPageViewController, UIPageViewControllerDataSource {
+ 
+  
     
     lazy var viewControllerList: [UIViewController] = {
 //        let lBTextViewController = LimitingBeliefsTextView()
@@ -65,7 +70,13 @@ class BeliefsListJournalEntryController: UIPageViewController, UIPageViewControl
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
         
+//        self.navigationItem.rightBarButtonItem =  UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
+//
+//        self.navigationItem.leftItemsSupplementBackButton = true
+//
     }
+    
+
     
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
         if gesture.direction == UISwipeGestureRecognizerDirection.right {

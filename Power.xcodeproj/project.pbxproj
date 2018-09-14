@@ -13,6 +13,7 @@
 		C22F94812149CDD30016806E /* GoalJournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22F947E2149CDD20016806E /* GoalJournalController.swift */; };
 		C22F94822149CDD30016806E /* GoalsJournalEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22F947F2149CDD20016806E /* GoalsJournalEntryCell.swift */; };
 		C22F94832149CDD30016806E /* GoalsJournalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22F94802149CDD30016806E /* GoalsJournalHeader.swift */; };
+		C22F94852149D58E0016806E /* limitingBeliefsSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22F94842149D58E0016806E /* limitingBeliefsSwipe.swift */; };
 		C23F3186214594880096E53B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23F3185214594880096E53B /* LoginController.swift */; };
 		C23FAAC321348A2700666943 /* BeliefsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FAAC221348A2700666943 /* BeliefsListController.swift */; };
 		C23FAAC521348A8D00666943 /* BeliefsListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FAAC421348A8D00666943 /* BeliefsListHeader.swift */; };
@@ -49,6 +50,7 @@
 		C22F947E2149CDD20016806E /* GoalJournalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalJournalController.swift; path = Power/Login/GoalJournal/GoalJournalController.swift; sourceTree = SOURCE_ROOT; };
 		C22F947F2149CDD20016806E /* GoalsJournalEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalsJournalEntryCell.swift; path = Power/Login/GoalJournal/GoalsJournalEntryCell.swift; sourceTree = SOURCE_ROOT; };
 		C22F94802149CDD30016806E /* GoalsJournalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalsJournalHeader.swift; path = Power/Login/GoalJournal/GoalsJournalHeader.swift; sourceTree = SOURCE_ROOT; };
+		C22F94842149D58E0016806E /* limitingBeliefsSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = limitingBeliefsSwipe.swift; sourceTree = "<group>"; };
 		C23F3185214594880096E53B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		C23FAAC221348A2700666943 /* BeliefsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeliefsListController.swift; sourceTree = "<group>"; };
 		C23FAAC421348A8D00666943 /* BeliefsListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeliefsListHeader.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				C2B1B99B21351C95007C0AE3 /* TextHolderWay.swift */,
+				C22F94842149D58E0016806E /* limitingBeliefsSwipe.swift */,
 				C2B1B99921351C4E007C0AE3 /* File.swift */,
 				C2F3F6F72135456100C6B2D1 /* BeliefsListJournalEntry2Draft.swift */,
 				C2F4569621484098005EAE55 /* ScrollingDraft.swift */,
@@ -208,7 +211,6 @@
 				C22F94802149CDD30016806E /* GoalsJournalHeader.swift */,
 			);
 			name = "Goal Journal";
-			path = "../Goal Journal";
 			sourceTree = "<group>";
 		};
 		C2E8C69E213CAB5900A2BE0F /* Sources */ = {
@@ -365,6 +367,7 @@
 				C23F3186214594880096E53B /* LoginController.swift in Sources */,
 				C23FAAC321348A2700666943 /* BeliefsListController.swift in Sources */,
 				C23FAAC721348AA100666943 /* BeliefsListCell.swift in Sources */,
+				C22F94852149D58E0016806E /* limitingBeliefsSwipe.swift in Sources */,
 				C2B1B99A21351C4E007C0AE3 /* File.swift in Sources */,
 				C281AB6A2134D22E00CFEA6D /* LimitingBeliefsTextView.swift in Sources */,
 				C2A8259B212E4CBE00D45C9C /* Extensions.swift in Sources */,

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>655655182950-s5mpep2acbcoitod8mevg1ungu9a66l9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.655655182950-s5mpep2acbcoitod8mevg1ungu9a66l9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAbYZqiAS35tEwTGtVQQO4e2Th2nEqpnLo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>655655182950</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.chrisg.Power</string>
+	<key>PROJECT_ID</key>
+	<string>power-d761e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>power-d761e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:655655182950:ios:e4e7659a8c96d6f3</string>
+	<key>DATABASE_URL</key>
+	<string>https://power-d761e.firebaseio.com</string>
+</dict>
+</plist>

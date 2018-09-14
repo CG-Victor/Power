@@ -8,15 +8,33 @@
 
 import UIKit
 
-class BeliefsListController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+//LimitingBeliefsTextViewDelegate
+
+class BeliefsListController: UICollectionViewController, UICollectionViewDelegateFlowLayout, LimitingBeliefsTextViewDelegate {
+    
+    func didSubmit() {
+//
+//
+//        let dummyCell = BeliefsListCell()
+//        guard let indexPath = collectionView?.indexPath(for: dummyCell) else { return }
+//
+//        var journalEntry = self.journalEntries[indexPath.item]
+        
+        
+//        self.journalEntries.append(dummyCell)
+//        self.journalEntries[indexPath.item] = journalEntry
+//        self.collectionView?.reloadItems(at: [indexPath])
+//        self.collectionView?.reloadData()
+        
+    }
+    
     
     
     let headerId = "headerId"
     let cellId = "cellId"
     
-    var journalEntries = [JournalEntry]()
-    var journalDraft = [UIPageViewController]()
-    
+    var journalEntries = [BeliefsListCell]()
+   
     override func viewDidLoad() {
         super .viewDidLoad()
         
@@ -27,6 +45,19 @@ class BeliefsListController: UICollectionViewController, UICollectionViewDelegat
         collectionView?.register(BeliefsListCell.self, forCellWithReuseIdentifier: cellId)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addJournalEntry))
+        
+        
+        
+        
+        
+        
+        let limitingBeliefsTextView = LimitingBeliefsTextView()
+        limitingBeliefsTextView.delegate = self
+        
+        
+        
+        
+        
     }
     
     @objc func addJournalEntry() {
@@ -35,11 +66,15 @@ class BeliefsListController: UICollectionViewController, UICollectionViewDelegat
         
         let beliefListJournalEntryController = BeliefsListJournalEntryController()
         
-        let navController = UINavigationController(rootViewController: beliefListJournalEntryController)
+//        let navController = UINavigationController(rootViewController: beliefListJournalEntryController)
 //        journalEntries.append(beliefListJournalEntryController)
 //        journalDraft.append(beliefListJournalEntryController)
         
-        present(navController, animated: true, completion: nil)
+//        navigationController?.pushViewController(beliefListJournalEntryController, animated: true)
+        
+        present(beliefListJournalEntryController, animated: true, completion: nil)
+        
+        
     }
     
     
@@ -56,6 +91,9 @@ class BeliefsListController: UICollectionViewController, UICollectionViewDelegat
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! BeliefsListCell
+//
+//        cell.journalDraft = self.journalEntries[indexPath.item]
+        
         return cell
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

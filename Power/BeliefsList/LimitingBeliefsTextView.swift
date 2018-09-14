@@ -10,9 +10,14 @@ import UIKit
 import Foundation
 import Firebase
 
-
+// WAS HERE
+protocol LimitingBeliefsTextViewDelegate {
+    func didSubmit()
+}
 
 class LimitingBeliefsTextView: UIViewController, UITextViewDelegate {
+    
+    var delegate: LimitingBeliefsTextViewDelegate?
     
     var journalEntry: JournalEntry?
     
@@ -111,36 +116,40 @@ class LimitingBeliefsTextView: UIViewController, UITextViewDelegate {
         
         textView.delegate = self
         
-//        view.addSubview(submitButton)
-//        submitButton.anchor(top: textView.topAnchor, left: nil, bottom: nil, right: textView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 12, width: 50, height: 50)
+        self.navigationItem.rightBarButtonItem =  UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
+        
 
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(back))
+//        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         
-        // let statusBarView = UIView(frame: UIApplication.shared.statusBarFrame)
-//        let statusBarView = UIView(frame: UIApplication.shared.statusBarFrame)
-//        let statusBarColor = UIColor.white
-//        statusBarView.backgroundColor = statusBarColor
-//        view.addSubview(statusBarView)
+        
 
-        
-        // Gesture
-//        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
-//        swipeLeft.direction = .left
-//        self.view.addGestureRecognizer(swipeLeft)
-        
-//        let backButton = UIBarButtonItem(title: "", style: .plain, target: navigationController, action: nil)
-//        navigationItem.leftBarButtonItem = backButton
+    }
+    
+    @objc func back() {
+        print("saving")
+        self.dismiss(animated: true, completion: nil)
+
     }
     
 
-
-
-//    @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
-//        if gesture.direction == UISwipeGestureRecognizerDirection.left {
-//            _ = navigationController?.popViewController(animated: true)
-//        }
-//    }
+    
+    @objc func save() {
+        print("saving")
+        
+        delegate?.didSubmit()
+    }
     
 
+    
+//    @objc func addJournalEntry() {
+//        delegate?.didSubmit()
+//        
+////        delegate?.didSubmit(for: commentText)
+//    }
+
+
+    
 
 
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -174,16 +183,18 @@ class LimitingBeliefsTextView: UIViewController, UITextViewDelegate {
     }
 
     
-    override func viewDidLayoutSubviews() {
-        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
+    // * MARK NAVIGATION HIDE
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
-        
-        UIApplication.shared.isStatusBarHidden = true
-    }
+//    override func viewDidLayoutSubviews() {
+//        navigationController?.setNavigationBarHidden(true, animated: false)
+//    }
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        navigationController?.setNavigationBarHidden(false, animated: false)
+//
+//        UIApplication.shared.isStatusBarHidden = true
+//    }
     
     
 
