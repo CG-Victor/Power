@@ -19,6 +19,7 @@
 		C23FAAC521348A8D00666943 /* BeliefsListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FAAC421348A8D00666943 /* BeliefsListHeader.swift */; };
 		C23FAAC721348AA100666943 /* BeliefsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FAAC621348AA100666943 /* BeliefsListCell.swift */; };
 		C23FAAC921348E0E00666943 /* BeliefsListJournalEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FAAC821348E0E00666943 /* BeliefsListJournalEntryController.swift */; };
+		C24A7427214CD76E003043A5 /* limitingBelief3AddedTitleLabelsSubmitNoNavi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24A7426214CD76E003043A5 /* limitingBelief3AddedTitleLabelsSubmitNoNavi.swift */; };
 		C277C5582131ECFF00FA7F73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C277C5572131ECFF00FA7F73 /* Main.storyboard */; };
 		C281AB6A2134D22E00CFEA6D /* LimitingBeliefsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281AB692134D22E00CFEA6D /* LimitingBeliefsTextView.swift */; };
 		C281AB6C2134D24800CFEA6D /* EmpoweringBeliefsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281AB6B2134D24800CFEA6D /* EmpoweringBeliefsTextView.swift */; };
@@ -30,6 +31,11 @@
 		C2A8259B212E4CBE00D45C9C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8259A212E4CBE00D45C9C /* Extensions.swift */; };
 		C2B1B99A21351C4E007C0AE3 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1B99921351C4E007C0AE3 /* File.swift */; };
 		C2B1B99C21351C95007C0AE3 /* TextHolderWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1B99B21351C95007C0AE3 /* TextHolderWay.swift */; };
+		C2C8B5E6214D668A007E3A16 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8B5E5214D668A007E3A16 /* User.swift */; };
+		C2C8B5E8214D693B007E3A16 /* FirebaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8B5E7214D693B007E3A16 /* FirebaseUtils.swift */; };
+		C2C8B5EB214D7DD2007E3A16 /* BeliefsListCleanUpManagedToPutCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8B5EA214D7DD2007E3A16 /* BeliefsListCleanUpManagedToPutCells.swift */; };
+		C2C8B5ED214D7DEE007E3A16 /* BeliefsListJournalEntryControllerCleanUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8B5EC214D7DEE007E3A16 /* BeliefsListJournalEntryControllerCleanUp.swift */; };
+		C2C8B5EF214D7E0F007E3A16 /* LimitingTextCLEANUP.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8B5EE214D7E0F007E3A16 /* LimitingTextCLEANUP.swift */; };
 		C2E88633212FE64A00F922FE /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88632212FE64A00F922FE /* UIColor+theme.swift */; };
 		C2E8C6A3213CAB5A00A2BE0F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2E8C69F213CAB5900A2BE0F /* Info.plist */; };
 		C2E8C6A4213CAB5A00A2BE0F /* VideoBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E8C6A1213CAB5900A2BE0F /* VideoBackground.swift */; };
@@ -56,6 +62,7 @@
 		C23FAAC421348A8D00666943 /* BeliefsListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeliefsListHeader.swift; sourceTree = "<group>"; };
 		C23FAAC621348AA100666943 /* BeliefsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeliefsListCell.swift; sourceTree = "<group>"; };
 		C23FAAC821348E0E00666943 /* BeliefsListJournalEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeliefsListJournalEntryController.swift; sourceTree = "<group>"; };
+		C24A7426214CD76E003043A5 /* limitingBelief3AddedTitleLabelsSubmitNoNavi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = limitingBelief3AddedTitleLabelsSubmitNoNavi.swift; sourceTree = "<group>"; };
 		C277C5572131ECFF00FA7F73 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C281AB692134D22E00CFEA6D /* LimitingBeliefsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitingBeliefsTextView.swift; sourceTree = "<group>"; };
 		C281AB6B2134D24800CFEA6D /* EmpoweringBeliefsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpoweringBeliefsTextView.swift; sourceTree = "<group>"; };
@@ -69,6 +76,11 @@
 		C2A8259A212E4CBE00D45C9C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C2B1B99921351C4E007C0AE3 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		C2B1B99B21351C95007C0AE3 /* TextHolderWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHolderWay.swift; sourceTree = "<group>"; };
+		C2C8B5E5214D668A007E3A16 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C2C8B5E7214D693B007E3A16 /* FirebaseUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtils.swift; sourceTree = "<group>"; };
+		C2C8B5EA214D7DD2007E3A16 /* BeliefsListCleanUpManagedToPutCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeliefsListCleanUpManagedToPutCells.swift; sourceTree = "<group>"; };
+		C2C8B5EC214D7DEE007E3A16 /* BeliefsListJournalEntryControllerCleanUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeliefsListJournalEntryControllerCleanUp.swift; sourceTree = "<group>"; };
+		C2C8B5EE214D7E0F007E3A16 /* LimitingTextCLEANUP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitingTextCLEANUP.swift; sourceTree = "<group>"; };
 		C2E88632212FE64A00F922FE /* UIColor+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
 		C2E8C69F213CAB5900A2BE0F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2E8C6A0213CAB5900A2BE0F /* SwiftVideoBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftVideoBackground.h; sourceTree = "<group>"; };
@@ -113,7 +125,9 @@
 		C23F318421458BA60096E53B /* Drafts */ = {
 			isa = PBXGroup;
 			children = (
+				C2C8B5E9214D7DA8007E3A16 /* Clean Up code */,
 				C2B1B99B21351C95007C0AE3 /* TextHolderWay.swift */,
+				C24A7426214CD76E003043A5 /* limitingBelief3AddedTitleLabelsSubmitNoNavi.swift */,
 				C22F94842149D58E0016806E /* limitingBeliefsSwipe.swift */,
 				C2B1B99921351C4E007C0AE3 /* File.swift */,
 				C2F3F6F72135456100C6B2D1 /* BeliefsListJournalEntry2Draft.swift */,
@@ -191,6 +205,7 @@
 			children = (
 				C2A8259A212E4CBE00D45C9C /* Extensions.swift */,
 				C2F1E915212E5E6500137B59 /* MainTabBarController.swift */,
+				C2C8B5E7214D693B007E3A16 /* FirebaseUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -201,6 +216,16 @@
 				C2A8258A212E4A4500D45C9C /* MeditationController.swift */,
 			);
 			path = Meditation;
+			sourceTree = "<group>";
+		};
+		C2C8B5E9214D7DA8007E3A16 /* Clean Up code */ = {
+			isa = PBXGroup;
+			children = (
+				C2C8B5EA214D7DD2007E3A16 /* BeliefsListCleanUpManagedToPutCells.swift */,
+				C2C8B5EC214D7DEE007E3A16 /* BeliefsListJournalEntryControllerCleanUp.swift */,
+				C2C8B5EE214D7E0F007E3A16 /* LimitingTextCLEANUP.swift */,
+			);
+			path = "Clean Up code";
 			sourceTree = "<group>";
 		};
 		C2E183F821306CEC00F6DF11 /* Goal Journal */ = {
@@ -228,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				C2F3F6F3213527C400C6B2D1 /* JournalEntry.swift */,
+				C2C8B5E5214D668A007E3A16 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -356,18 +382,24 @@
 				C2F3F6FA213545B500C6B2D1 /* BeliefsListJournalEntry3New.swift in Sources */,
 				C2F3F6F4213527C400C6B2D1 /* JournalEntry.swift in Sources */,
 				C22F94812149CDD30016806E /* GoalJournalController.swift in Sources */,
+				C2C8B5EF214D7E0F007E3A16 /* LimitingTextCLEANUP.swift in Sources */,
 				C2A8258B212E4A4500D45C9C /* MeditationController.swift in Sources */,
 				C2E88633212FE64A00F922FE /* UIColor+theme.swift in Sources */,
+				C2C8B5E6214D668A007E3A16 /* User.swift in Sources */,
 				C2E8C6A4213CAB5A00A2BE0F /* VideoBackground.swift in Sources */,
 				C2F4569721484098005EAE55 /* ScrollingDraft.swift in Sources */,
 				C2F1E916212E5E6500137B59 /* MainTabBarController.swift in Sources */,
+				C2C8B5E8214D693B007E3A16 /* FirebaseUtils.swift in Sources */,
+				C2C8B5ED214D7DEE007E3A16 /* BeliefsListJournalEntryControllerCleanUp.swift in Sources */,
 				C2F3F6F82135456100C6B2D1 /* BeliefsListJournalEntry2Draft.swift in Sources */,
 				C22F94832149CDD30016806E /* GoalsJournalHeader.swift in Sources */,
 				C2B1B99C21351C95007C0AE3 /* TextHolderWay.swift in Sources */,
 				C23F3186214594880096E53B /* LoginController.swift in Sources */,
 				C23FAAC321348A2700666943 /* BeliefsListController.swift in Sources */,
+				C24A7427214CD76E003043A5 /* limitingBelief3AddedTitleLabelsSubmitNoNavi.swift in Sources */,
 				C23FAAC721348AA100666943 /* BeliefsListCell.swift in Sources */,
 				C22F94852149D58E0016806E /* limitingBeliefsSwipe.swift in Sources */,
+				C2C8B5EB214D7DD2007E3A16 /* BeliefsListCleanUpManagedToPutCells.swift in Sources */,
 				C2B1B99A21351C4E007C0AE3 /* File.swift in Sources */,
 				C281AB6A2134D22E00CFEA6D /* LimitingBeliefsTextView.swift in Sources */,
 				C2A8259B212E4CBE00D45C9C /* Extensions.swift in Sources */,

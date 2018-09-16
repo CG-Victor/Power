@@ -103,6 +103,7 @@ class SignUpController: UIViewController, UINavigationControllerDelegate {
             
              print("Sucessfully saved user info to database")
             
+            // a uid as key, and username as dictionaryValues
             guard let uid = user?.user.uid else { return }
             let dictionaryValues = ["username": username]
             

@@ -13,13 +13,16 @@ class BeliefsListCell: UICollectionViewCell {
     var journalEntry: JournalEntry? {
         didSet {
             
-//            titleLabel.text = journalEntry?.title
-        
+            titleLabel.text = journalEntry?.title
             
         }
     }
 //
     // needs to be didSet soon
+    
+
+    
+
     
     let titleLabel: UILabel = {
         let label = UILabel()
@@ -79,9 +82,16 @@ class BeliefsListCell: UICollectionViewCell {
         
         let timeAgoDisplay = journalEntry.creationDate.timeAgoDisplay()
         
-        attributedText.append(NSAttributedString(string: timeAgoDisplay, attributes:
-            [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14),
-             NSAttributedStringKey.foregroundColor : UIColor.gray ]))
+        let attributedText2 = NSMutableAttributedString(string: timeAgoDisplay, attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14)])
+        
+//        attributedText.append(NSAttributedString(string: timeAgoDisplay, attributes:
+//            [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14),
+//             NSAttributedStringKey.foregroundColor : UIColor.gray ]))
+        
+        // perhaps you can put these attributed in one or can be seperated into assigned labels. For now, let's try to seperate them.
+        titleLabel.attributedText = attributedText
+        
+        dateLabel.attributedText = attributedText2
     }
     
     

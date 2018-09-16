@@ -9,13 +9,16 @@
 import UIKit
 import Foundation
 
+protocol EmpoweringBeliefsTextViewDelegate {
+    func didSubmit(for commentText: String)
+}
 
 class EmpoweringBeliefsTextView: UIViewController, UITextViewDelegate {
     
     let textView: UITextView = {
         let textView = UITextView()
         
-        let attributedText = NSMutableAttributedString(string: "1. As long as I remain diciplines and work on problems everyday, I can pass this class.", attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 18)])
+        let attributedText = NSMutableAttributedString(string: "1. As long as I remain focus and dicipline, look for help from my tutor, I can pass this class.", attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 18)])
         
 //        attributedText.append(NSAttributedString(string: "1. Your Empowering ", attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18)]))
         
@@ -76,16 +79,16 @@ class EmpoweringBeliefsTextView: UIViewController, UITextViewDelegate {
         view.addSubview(statusBarView)
         
         
-        self.navigationItem.rightBarButtonItem =  UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
+//        self.navigationItem.rightBarButtonItem =  UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
         
         
     }
     
-    @objc func save() {
-        print("saving")
-    }
-    
-    
+//    @objc func save() {
+//        print("saving")
+//    }
+//    
+//    
     
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

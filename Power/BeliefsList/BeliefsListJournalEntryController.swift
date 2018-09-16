@@ -8,30 +8,55 @@
 
 
 import UIKit
+import Firebase
 
 
 
+class BeliefsListJournalEntryController: UIPageViewController, UIPageViewControllerDataSource, LimitingBeliefsTextViewDelegate  {
+   
+    var journalEntry: JournalEntry?
+    
+    func didSave(topic: String, journalText: String) {
+        print("Testing for delegation")
+        
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let values = ["title": topic, "text": journalText, "creationDate": Date().timeIntervalSince1970, "uid": uid] as [String : Any]
 
-class BeliefsListJournalEntryController: UIPageViewController, UIPageViewControllerDataSource {
- 
-  
+        Database.database().reference().child("journalEntries").child(uid).childByAutoId().updateChildValues(values) { (err, ref) in
+            
+            if let err = err {
+                print("Failed to save user info into db:", err)
+                return
+            }
+            
+            print("Successfully saved user info to db")
+            
+        }
+    }
+    
+   
+
     
     lazy var viewControllerList: [UIViewController] = {
-//        let lBTextViewController = LimitingBeliefsTextView()
         
-        let lBTextViewController = templateNavController(rootViewController: LimitingBeliefsTextView())
+        let limitingBeliefsTextView = LimitingBeliefsTextView()
+        
+        let lBTextViewController = templateNavController(rootViewController: limitingBeliefsTextView)
+        limitingBeliefsTextView.delegate = self
         
         let eBTextViewController = templateNavController(rootViewController: EmpoweringBeliefsTextView())
+        
+        
         return [lBTextViewController, eBTextViewController]
     }()
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let vcIndex = viewControllerList.index(of: viewController) else { return nil } //arg above, get its index
+        guard let vcIndex = viewControllerList.index(of: viewController) else { return nil }
         
-        let previousIndex = vcIndex - 1 // this is before the current view controller
+        let previousIndex = vcIndex - 1
         
-        
-        guard previousIndex >= 0 else { return nil } // negative index nil shouldn't happen
+        guard previousIndex >= 0 else { return nil }
         
         guard viewControllerList.count > previousIndex else { return nil}
         
@@ -39,8 +64,7 @@ class BeliefsListJournalEntryController: UIPageViewController, UIPageViewControl
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        // now that comes after the view controller
-        
+
         guard let vcIndex = viewControllerList.index(of: viewController) else { return nil }
         
         let nextIndex = vcIndex + 1
@@ -49,9 +73,7 @@ class BeliefsListJournalEntryController: UIPageViewController, UIPageViewControl
         
         guard viewControllerList.count > nextIndex else { return nil }
         
-        return viewControllerList[nextIndex] // chosing the next index
-        
-        // we got the func for the vc that comes before the vurrent vc, that vc comes afteer, and don't come out of bounds and run this
+        return viewControllerList[nextIndex]
     }
     
 
@@ -61,6 +83,8 @@ class BeliefsListJournalEntryController: UIPageViewController, UIPageViewControl
         
         self.dataSource = self
         
+
+   
         if let firstViewController = viewControllerList.first {
             self.setViewControllers([firstViewController], direction: .forward
                 , animated: true, completion: nil)
@@ -70,10 +94,7 @@ class BeliefsListJournalEntryController: UIPageViewController, UIPageViewControl
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
         
-//        self.navigationItem.rightBarButtonItem =  UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
-//
-//        self.navigationItem.leftItemsSupplementBackButton = true
-//
+
     }
     
 
@@ -87,10 +108,34 @@ class BeliefsListJournalEntryController: UIPageViewController, UIPageViewControl
     
     
     fileprivate func templateNavController(rootViewController: UIViewController) -> UINavigationController {
+        
         let viewController = rootViewController
         let navController = UINavigationController(rootViewController: viewController)
         return navController
     }
+    
+    
+    override func viewDidLayoutSubviews() {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+
+        UIApplication.shared.isStatusBarHidden = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        UIApplication.shared.isStatusBarHidden = true
+
+        
+        
+    }
+    
+
 }
 
 

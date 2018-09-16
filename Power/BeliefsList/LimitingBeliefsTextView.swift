@@ -10,28 +10,29 @@ import UIKit
 import Foundation
 import Firebase
 
-// WAS HERE
 protocol LimitingBeliefsTextViewDelegate {
-    func didSubmit()
+    func didSave(topic: String, journalText: String)
 }
+
 
 class LimitingBeliefsTextView: UIViewController, UITextViewDelegate {
     
-    var delegate: LimitingBeliefsTextViewDelegate?
+
     
-    var journalEntry: JournalEntry?
+    var journalEntry: JournalEntry? {
+        didSet {
+            topicTextField.text = journalEntry?.title
+        }
+    }
     
     
-    let textView: UITextView = {
+    
+    fileprivate let journalTextView: UITextView = {
         let textView = UITextView()
         
-        let attributedText = NSMutableAttributedString(string: "1. I may not pass this Advanced Calculus class.", attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 18)])
-        
-//        attributedText.append(NSAttributedString(string: "1. False xyz", attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)]))
+        let attributedText = NSMutableAttributedString(string: "1. This advanced Computer Science class is too difficult", attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 18)])
         
         textView.attributedText = attributedText
-        
-        
         textView.textColor = UIColor.lightGray
         textView.backgroundColor = UIColor.gloomyBackground
         textView.becomeFirstResponder()
@@ -41,51 +42,59 @@ class LimitingBeliefsTextView: UIViewController, UITextViewDelegate {
 
     }()
     
-    fileprivate let submitButton: UIButton = {
+    lazy var saveButton: UIButton = {
         let sb = UIButton(type: .system)
-        sb.setTitle("Submit", for: .normal)
+        sb.setTitle("Save", for: .normal)
         sb.setTitleColor(.red, for: .normal)
         sb.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        sb.addTarget(self, action: #selector(handleSubmit), for: .touchUpInside)
+        sb.addTarget(self, action: #selector(handleSave), for: .touchUpInside)
         return sb
     }()
     
-    @objc func handleSubmit() {
+    
+    var delegate: LimitingBeliefsTextViewDelegate?
+    
+    @objc func handleSave() {
+        print("testing save")
         
-        guard let commentText = textView.text else { return }
+
+        guard let topic = topicTextField.text else { return }
+        guard let journalText = journalTextView.text else { return }
         
-        
-        let values = ["text": commentText, "creationDate": Date().timeIntervalSince1970] as [String : Any]
-        
-        Database.database().reference().child("comments").updateChildValues(values, withCompletionBlock: { (err, ref) in
-            
-            if let err = err {
-                print("Failed to save user info into db:", err)
-                return
-            }
-            
-            print("Successfully saved user info to db")
-            
-        })
-        
+        self.delegate?.didSave(topic: topic, journalText: journalText)
+
+
     }
     
-    let limitingBeliefLabel: UILabel = {
-        let label = UILabel()
-       
+    
 
+    
+    let topicTextField: UITextField = {
+        let textField = UITextField()
+
+        textField.tintColor = .white
+        textField.textColor = .white
+        textField.translatesAutoresizingMaskIntoConstraints = false
         
+        textField.attributedPlaceholder = NSAttributedString(string: "Insert topic here", attributes:
+                                        [NSAttributedStringKey.foregroundColor: UIColor.gray])
+        
+        return textField
+    }()
+    
+
+ 
+
+
+    fileprivate let limitingBeliefLabel: UILabel = {
+        let label = UILabel()
         let attributedText = NSMutableAttributedString(string: "Limiting Beliefs", attributes:
-            [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25),
+            [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 15),
             NSAttributedStringKey.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
         
         
         label.attributedText = attributedText
         label.textAlignment = .center
-//        label.font = UIFont.systemFont(ofSize: 25)
-        
-        
-        
         label.textColor = .white
         return label
     }()
@@ -95,109 +104,97 @@ class LimitingBeliefsTextView: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         
 
-        
-        Database.database().isPersistenceEnabled = true
-        
 
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
+            
         view.backgroundColor = UIColor.gloomyBackground
         
         let containerView = UIView()
         containerView.backgroundColor = .gloomyBackground
         
         view.addSubview(containerView)
-        containerView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 50)
+        containerView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 80)
         
+        
+        
+        containerView.addSubview(topicTextField)
+        topicTextField.anchor(top: containerView.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 15, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        topicTextField.center(x: containerView.centerXAnchor, y: nil)
+        
+
         containerView.addSubview(limitingBeliefLabel)
-        limitingBeliefLabel.anchor(top: containerView.topAnchor, left: containerView.leftAnchor, bottom: containerView.bottomAnchor, right: containerView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
-
-
-        view.addSubview(textView)
-        textView.anchor(top: containerView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
-        
-        textView.delegate = self
-        
-        self.navigationItem.rightBarButtonItem =  UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
-        
-
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(back))
-//        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+        limitingBeliefLabel.anchor(top: nil, left: nil, bottom: containerView.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        limitingBeliefLabel.center(x: containerView.centerXAnchor, y: nil)
         
         
-
+        view.addSubview(journalTextView)
+        journalTextView.anchor(top: containerView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        journalTextView.delegate = self // told ya NOT TO REMOVE THIS!!
+        
+        
+        
+        
+        view.addSubview(saveButton)
+        saveButton.anchor(top: containerView.topAnchor, left: nil, bottom: nil, right: containerView.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 5, width: 0, height: 0)
     }
-    
-    @objc func back() {
-        print("saving")
-        self.dismiss(animated: true, completion: nil)
-
-    }
-    
-
-    
-    @objc func save() {
-        print("saving")
-        
-        delegate?.didSubmit()
-    }
-    
-
-    
-//    @objc func addJournalEntry() {
-//        delegate?.didSubmit()
-//        
-////        delegate?.didSubmit(for: commentText)
-//    }
-
-
-    
 
 
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
 
-        // Combine the textView text and the replacement text to create the updated text string
+
         let currentText:String = textView.text
         let updatedText = (currentText as NSString).replacingCharacters(in: range, with: text)
 
-        // If updated text view will be empty, add the placeholder and set the cursor to the beginning of the text view
         if updatedText.isEmpty {
 
             textView.text = "1."
-            textView.textColor = UIColor.lightGray // font as you start typing
+            textView.textColor = UIColor.lightGray
 
             textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
+            
+
         }
 
-            // Else if the text view's placeholder is showing and the length of the replacement string is greater than 0, set the text color to black then set its text to the replacement string
+
         else if textView.textColor == UIColor.lightGray && !text.isEmpty {
             textView.textColor = UIColor.white
             textView.text = text
         }
 
-            // For every other case, the text should change with the usual behavior...
         else {
             return true
         }
 
-        // ...otherwise return false since the updates have already  been made
         return false
     }
 
     
     // * MARK NAVIGATION HIDE
     
-//    override func viewDidLayoutSubviews() {
-//        navigationController?.setNavigationBarHidden(true, animated: false)
-//    }
-//
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        navigationController?.setNavigationBarHidden(false, animated: false)
-//
-//        UIApplication.shared.isStatusBarHidden = true
-//    }
+    override func viewDidLayoutSubviews() {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        UIApplication.shared.isStatusBarHidden = true
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+
+        UIApplication.shared.isStatusBarHidden = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        UIApplication.shared.isStatusBarHidden = false
+    }
 
 }
 

@@ -8,7 +8,37 @@
 
 import UIKit
 
+protocol HeaderDelegate {
+    func headerTapped()
+}
+
 class BeliefsListHeader: UICollectionViewCell {
+    
+    var delegate: HeaderDelegate?
+    
+//    let containerView: UIView = {
+//        let container = UIView()
+//        container.backgroundColor = .green
+//        return container
+//    }()
+//
+//    containerView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+    
+    
+    
+    fileprivate let submitButton: UIButton = {
+        let sb = UIButton(type: .system)
+        sb.setTitle("Submit", for: .normal)
+        sb.setTitleColor(.red, for: .normal)
+        sb.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        sb.addTarget(self, action: #selector(handleSubmit), for: .touchUpInside)
+        return sb
+    }()
+    
+    @objc func handleSubmit() {
+        print("testing")
+    }
+    
     
     let titleLabel: UILabel = {
         let label = UILabel()
@@ -42,9 +72,14 @@ class BeliefsListHeader: UICollectionViewCell {
         super.init(frame: frame)
         
         
+        
+        
         addSubview(titleLabel)
         titleLabel.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         backgroundColor = .white
+        
+        
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
